@@ -1,0 +1,15 @@
+<div class="popUpTrip-bg" ng-show="isEditorVisible">
+    <div class="popUpTrip">
+        <div class="content">
+            <p>{{editorTitle}} trip record:</p>
+
+            <form name="tripForm" role="form" ng-submit="tripForm.$valid && applyTrip()" novalidate>
+                <input type="number" ng-model="currentTrip.distance" placeholder="Distance" class="form-control" required>
+                <input type="number" ng-model="currentTrip.fuel" placeholder="Fuel" class="form-control" required><br>
+                <input type="submit" class="btn btn-primary" value="Apply">
+                <input type="button" class="btn btn-primary" value="Cancel" ng-click="cancelTrip()">
+                <!--<div>tripForm is {{tripForm.$valid}}</div>-->
+            </form>
+        </div>
+    </div>
+</div>

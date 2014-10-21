@@ -1,0 +1,17 @@
+[
+    {
+        "distance": 15,
+        "fuel": 2,
+        "rate": 13.33
+    },
+    {
+        "distance": 100,
+        "fuel": 12,
+        "rate": 12
+    },
+    {
+        "distance": 150,
+        "fuel": 17,
+        "rate": 11.33
+    }
+]

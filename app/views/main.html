@@ -1,0 +1,43 @@
+<div class="container">
+    <h3>Trip records
+    <button class="btn btn-success" ng-click="addTrip()">
+        <!--ng-show="!isEdit">-->
+        <span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Add Record
+    </button>
+    </h3>
+
+    <table class="table table-striped" ng-show="listTrip.length">
+        <thead><tr>
+            <th>Distance (km)</th>
+            <th>Fuel (litre)</th>
+            <th>Fuel Rate (litre/100km)</th>
+            <th></th>
+            <th></th>
+        </tr></thead>
+        <tbody>
+            <tr ng-repeat="record in listTrip">
+                <td>{{ record.distance }}</td>
+                <td>{{ record.fuel }}</td>
+                <td>{{ record.rate }}</td>
+                <td>
+                    <button class="btn btn-link" ng-click="editTrip($index)">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-link" ng-click="removeTrip($index)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+            </tr>
+            <tr class="summary">
+                <td>{{ summary.distance }}</td>
+                <td>{{ summary.fuel }}</td>
+                <td>{{ summary.rate }}</td>
+                <td/>
+                <td/>
+            </tr>
+        </tbody>
+    </table>
+    <pop-up-trip></pop-up-trip>
+</div>
